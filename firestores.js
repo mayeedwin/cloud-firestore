@@ -7,7 +7,9 @@ let config = {
       storageBucket: "gdgmoipwa.appspot.com",
       messagingSenderId: "202011378148"
   };
+  
   firebase.initializeApp(config);
+
   let firestore = firebase.firestore();
   console.log("Firestores Loaded")
   
@@ -18,53 +20,33 @@ let config = {
   firestore.settings(settings);
   
 // Create an initial document to update.
-var meetupsmeetupsDocRef = db.collection("meetups").doc("next");
-meetupsmeetupsDocRef.set({
-    desc: "Next ’18 is a three day global exhibition of inspiration, innovation, and education where we learn from one another how the cloud can transform how we work and power everyone’s successes.",
-    title: "Next '18 Extended 2018",
-    year: 2018
-})
-
-var meetupsmeetupsDocRef = db.collection("meetups").doc("recent");
-meetupsmeetupsDocRef.set({
-    desc: "Next ’18 is a three day global exhibition of inspiration, innovation, and education where we learn from one another how the cloud can transform how we work and power everyone’s successes.",
-    title: "Next '18 Extended 2018",
-    year: 2018
-});
-
-// To update age and favorite color:
-db.collection("meetups").doc("next").update({
-    desc: "Next ’18 is a three day global exhibition of inspiration, innovation, and education where we learn from one another how the cloud can transform how we work and power everyone’s successes.",
-    title: "Next '18 Extended 2018",
-    year: 2018
+var docRef = db.collection("meetups").doc("categ");
+docRef.set({
+    next_title: "Next '18 Extended 2018",
+    next_desc: "Next ’18 is a three day global exhibition of inspiration, innovation, and education where we learn from one another how the cloud can transform how we work and power everyone’s successes.",
+    recent_title: "Google IO Extended Eldoret 2018",
+    recent_desc: "I/O Extended events help developers from around the world take part in the I/O experience from wherever they are. We had Talks, Hands-on sessions and I/O 18 Recap viewing",
 })
 
 .then(function() {
     console.log("Document successfully updated!");
 });
 
-var meetupsDocRef = db.collection('meetups').doc('next');
-
+var docRef = db.collection('meetups').doc('categ');
 // Update the timestamp field with the value from the server
-var updateTimestamp = meetupsDocRef.update({
+var updateTimestamp = docRef.update({
     timestamp: firebase.firestore.FieldValue.serverTimestamp()
 });
-
 console.log(updateTimestamp)
 
 // Read data
-
-var meetupsDocRef = db.collection("meetups").doc("next");
-
-meetupsDocRef.get().then(function(doc) {
-    if (doc.exists) {
-        console.log("Document data:", doc.data());
-    } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-    }
-    
-}).catch(function(error) {
-    console.log("Error getting document:", error);
+db.collection("meetups").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} =>`, doc.data());
+        const meetups=doc.data();
+        next_title.innerText=meetups.next_title;
+        next_desc.innerText=meetups.next_desc;
+        recent_title.innerText=meetups.recent_title;
+        recent_desc.innerText=meetups.recent_desc;
+    });
 });
-
