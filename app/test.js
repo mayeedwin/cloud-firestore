@@ -7,8 +7,9 @@ let config = {
       storageBucket: "gdgmoipwa.appspot.com",
       messagingSenderId: "202011378148"
   };
-
+  
   firebase.initializeApp(config);
+
   let firestore = firebase.firestore();
   console.log("Firestores Loaded")
   
@@ -18,28 +19,6 @@ let config = {
   const settings = { timestampsInSnapshots: true};
   firestore.settings(settings);
   
-  firebase.firestore().enablePersistence()
-  
-    .then(function() {
-        // Initialize Cloud Firestore through firebase
-        var db = firebase.firestore();
-        
-    })
-    
-    .catch(function(err) {
-        if (err.code == 'failed-precondition') {
-            // Multiple tabs open, persistence can only be enabled
-            // in one tab at a a time.
-            // ...
-            
-        } else if (err.code == 'unimplemented') {
-            // The current browser does not support all of the
-            // features required to enable persistence
-            // ...
-        }
-    });
-
-    
 // Create an initial document to update.
 var docRef = db.collection("meetups").doc("categ");
 docRef.set({
@@ -71,8 +50,3 @@ db.collection("meetups").get().then((querySnapshot) => {
         recent_desc.innerText=meetups.recent_desc;
     });
 });
-
-
-  
-  
-    

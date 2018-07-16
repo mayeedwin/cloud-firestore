@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cloud Firestores</title>
+    <title>PWA Fire Codelabs - Get started with firebase cloud firestores for web apps </title>
+<!-- register service worker -->
+<script>
+
+    if ('serviceWorker' in navigator) 
+    {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js')
+      .then(function() { console.log("Service Worker Registered, Cheers to PWA Fire!"); });
+    }
+    );
+  }  
+  </script> 
+<!-- end of service worker -->
 </head>
 <body>
+    
     <div id="next_title"></div><br>
     <div id="next_desc"></div><br>
     <div id="recent_title"></div><br>
@@ -14,7 +28,8 @@
 
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
-    <script src="offline.js"></script>
-    <script src="app.js"></script>
+    <script src="app/firestores.js"></script>
+    <script src="app/data.js"></script>
+    <script src="app/app.js"></script>
 </body>
 </html>
