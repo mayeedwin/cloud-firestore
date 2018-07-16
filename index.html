@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PWA Fire Codelabs - Get started with firebase cloud firestores for web apps </title>
+    <link rel="stylesheet" href="app/main.css">
 <!-- register service worker -->
 <script>
 
@@ -20,16 +21,23 @@
 <!-- end of service worker -->
 </head>
 <body>
-    
-    <div id="next_title"></div><br>
-    <div id="next_desc"></div><br>
-    <div id="recent_title"></div><br>
-    <div id="recent_desc"></div>
 
+  <section id="gdg-faqs">
+   <div align="center">
+       <h3>Never Miss Our Events</h3>
+        <p class="faqbeta_accordion" id="next_title"></p>
+        <div class="faqbeta_panel"  id="next_desc"></div>
+        <p class="faqbeta_accordion" id="recent_title"></p>
+        <div class="faqbeta_panel"  id="recent_desc"></div>
+    </div>
+        <br>
+    </section>
+        
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
     <script src="app/firestores.js"></script>
     <script src="app/data.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/faqbeta.js"></script>
 </body>
 </html>
