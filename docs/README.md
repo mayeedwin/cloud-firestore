@@ -11,7 +11,7 @@ Open the [Firebase Console](https://console.firebase.google.com/) and create a n
 To get started with the Web, select **test mode** and click **Enable.** Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to **read** and **overwrite** your data. Make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestore.
 
 ### [Getting started with the code](https://pwafire.org/developer/codelabs/firestore-for-web)
-The default **index.html** page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
+The default [index.html](https://github.com/mayeedwin/firestore/blob/master/work/index.html) page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
 
 We also have [service-worker.js](https://github.com/mayeedwin/firestore/blob/master/work/service-worker.js) in our project that allows us to add progressive web app offline features. [Learn more](https://pwafire.org/developer/codelabs/pwafire/#sw-config) about the service worker and its features.
 
