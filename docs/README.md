@@ -1,7 +1,7 @@
 ### [Firebase Cloud Firestore Web Codelab](https://pwafire.org/developer/codelabs/firestore-for-web)
 In this codelab, we're going to learn how to add [Firebase](https://firebase.google.com/docs/) to your [web app](https://pwafire.org/developer/codelabs/pwafire/) and serve content from the [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore/) and make your web app work offline as well.
 
-### Tools needed
+### [Tools needed](https://firebase.google.com/docs/hosting/deploying)
 We shall be using Firebase in this codelab. Make sure you install firebase tools as in [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#add-firebase) before we begin. Just install and leave it there.
 
 #### [1. Create a Cloud Firestore project](https://console.firebase.google.com/)
