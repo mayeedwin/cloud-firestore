@@ -8,6 +8,9 @@ Open the [Firebase Console](https://console.firebase.google.com/) and create a n
 #### 2. Select a starting mode for your Cloud Firestore Security Rules
 To get started with the Web, select **test mode** and click **Enable.** Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to **read** and **overwrite** your data. Make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestore.
 
+### Getting started with the code
+The default **index.html** page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
+
 #### 3. Adding Firebase to our Web app
 Go to your [firebase console](https://console.firebase.google.com) here and select your project. Click **Settings** icon on the top left side just beside **Project Overview** and select **Project Settings.** Scroll down the view and click **Add Firebase to your web app** icon. Do not close the tab.
 
@@ -131,7 +134,7 @@ const recent_title=document.querySelector("#recent_title");
 const recent_desc=document.querySelector("#recent_desc");
 
 ```
-**Explanation :** The *next_title.innerText* code in stage 5 for gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e our paragraph element has its **id** as ***next_title*** and we use this **id** to display the data into our paragraph element.
+**Explanation :** The *next_title.innerText* code in stage 5 for gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e our paragraph element has its **id** as **next_title** and we use this **id** to display the data into our paragraph element.
 
 ```html 
 <p class="faqbeta_accordion" id="next_title"></p>
