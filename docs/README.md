@@ -8,7 +8,7 @@ Open the [Firebase Console](https://console.firebase.google.com/) and create a n
 #### 2. Select a starting mode for your Cloud Firestore Security Rules
 To get started with the Web, select **test mode** and click **Enable.** Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to **read** and **overwrite** your data. Make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestore.
 
-### Getting started with the code
+### [Getting started with the code](https://pwafire.org/developer/codelabs/firestore-for-web)
 The default **index.html** page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
 
 #### [1. Adding Firebase to our Web app](https://console.firebase.google.com)
@@ -120,7 +120,7 @@ docRef.set({
 });
 
 ```
-#### 5. Display data into our web app
+#### [5. Display data into our web app]()
 In the **app** folder again, open **app.js** and add the code snippet below to it.
 
 ```javascript
@@ -139,7 +139,9 @@ const recent_desc=document.querySelector("#recent_desc");
 ```html 
 <p class="faqbeta_accordion" id="next_title"></p>
 ```
-### Firebase hosting
+### [Firebase hosting](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting)
 We are done! Let's now deploy our cloud firestore web app to firebase ! Follow [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting) to deploy our web app.
 
 ### What next?
+You got any **bug?** report it [here for support.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute?  Learn more on firebase web setup here
+
