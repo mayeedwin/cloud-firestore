@@ -143,7 +143,9 @@ const recent_desc=document.querySelector("#recent_desc");
 <p class="faqbeta_accordion" id="next_title"></p>
 ```
 ### [Firebase hosting](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting)
-We are done! Let's now deploy our cloud firestore web app to firebase ! Follow [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting) to deploy our web app. Go offline and refresh your web app. The web app data is still available while offline. If you are soing Google Chrome, open Dev Tools and while in the Application panel, select Service Worker and enable offline. Refresh your web app. Celebrate! Aren't you a nerd already?
+We are done! Let's now deploy our cloud firestore web app to firebase ! Follow [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting) to deploy our web app. Go offline and refresh your web app. The web app data is still available while offline. 
+
+If you are soing Google Chrome, open Dev Tools and while in the Application panel, select Service Worker and enable offline. Refresh your web app. Celebrate! Aren't you a nerd already?
 
 ### [What next?]()
 You got any **bug?** Report it [here for support.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/firestore/issues/new) 
