@@ -7,7 +7,7 @@ We shall be using Firebase in this codelab. Make sure you install firebase tools
 #### [1. Create a Cloud Firestore project](https://console.firebase.google.com/)
 Open the [Firebase Console](https://console.firebase.google.com/) and create a new project. In the Database section, click the Get Started button for Cloud Firestore.
 
-#### 2. Select a starting mode for your Cloud Firestore Security Rules
+#### [2. Select a starting mode for your Cloud Firestore Security Rules]()
 To get started with the Web, select **test mode** and click **Enable.** Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to **read** and **overwrite** your data. Make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestore.
 
 ### [Getting started with the code](https://pwafire.org/developer/codelabs/firestore-for-web)
