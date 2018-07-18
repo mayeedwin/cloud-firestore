@@ -11,7 +11,7 @@ To get started with the Web, select **test mode** and click **Enable.** Test Mod
 ### Getting started with the code
 The default **index.html** page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
 
-#### 3. Adding Firebase to our Web app
+#### 1. Adding Firebase to our Web app
 Go to your [firebase console](https://console.firebase.google.com) here and select your project. Click **Settings** icon on the top left side just beside **Project Overview** and select **Project Settings.** Scroll down the view and click **Add Firebase to your web app** icon. Do not close the tab.
 
 - Make sure you are in the **work** folder. Open the **app** folder. Here we have **main.css** and **faqbeta.js** which styles up our web app and empty javascript files; **app.js**, **firestores.js** and **data.js**. We are going to add some code to them.
@@ -43,7 +43,7 @@ const settings = {
 firestore.settings(settings);
 
 ```
-#### 4. Enable offline data
+#### 2. Enable offline data
 This feature caches a copy of the Cloud Firestore data that your app is actively using, so your app can access the data when the device is offline. The code snippet below does that for us. Copy and add it below the code above in firestore.js file.
 
 ```javascript
@@ -67,7 +67,7 @@ firebase.firestore().enablePersistence()
 
 
 ```
-#### 5. Read firestore data from database in the meetups collection
+#### 3. Read firestore data from database in the meetups collection
 
 The code below allows us to read firestore data from our database in the meetups collection created; Add it below the code above
 
@@ -101,7 +101,7 @@ db.collection("meetups").get().then((querySnapshot) => {
 ```
 The update the timestamp field with the value from the server code allows to record in the database when we last updated our entire collection;
 
-#### 6. Create "meetups" document in our database
+#### 4. Create "meetups" document in our database
 Cloud Firestore stores data in Documents, which are stored in Collections. Cloud Firestore creates collections and documents implicitly the first time you add data to the document. In the **app** folder, open **data.js** file and copy the code snippet below to it.
 
 ```javascript
@@ -120,7 +120,7 @@ docRef.set({
 });
 
 ```
-#### 7. Display data into our web app
+#### 5. Display data into our web app
 In the **app** folder again, open **app.js** and add the code snippet below to it.
 
 ```javascript
@@ -134,7 +134,7 @@ const recent_title=document.querySelector("#recent_title");
 const recent_desc=document.querySelector("#recent_desc");
 
 ```
-**Explanation :** The *next_title.innerText* code in stage 5 for gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e our paragraph element has its **id** as **next_title** and we use this **id** to display the data into our paragraph element.
+**Explanation :** The *next_title.innerText* code in **stage 3** for gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e our paragraph element has its **id** as **next_title** and we use this **id** to display the data into our paragraph element.
 
 ```html 
 <p class="faqbeta_accordion" id="next_title"></p>
