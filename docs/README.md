@@ -7,3 +7,10 @@ Open the [Firebase Console](https://console.firebase.google.com/) and create a n
 
 #### 2. Select a starting mode for your Cloud Firestore Security Rules
 To get started with the Web, select test mode. Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to read and overwrite your data. After testing, make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestores.
+
+#### 3. AddIng Firebase to our Web app
+For our project, we are going to use our own configuartion file to add Firebase to our web app. 
+
+> Make sure you are in the work folder. 
+
+> Create a new folder called app - all our web app firestore config files will be created here.
