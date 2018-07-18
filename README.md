@@ -1,4 +1,4 @@
-### [Firebase Cloud Firestore Web Codelab](https://pwafire.org/developer/codelabs/firestore-web)
+### [Firebase Cloud Firestore Web Codelab](https://pwafire.org/developer/codelabs/firestore-for-web)
 Get started with firebase cloud firestores for web apps coidelab curated by [PWA Fire Codelabs](https://pwafire.org/developer/codelabs/)
 
 #### [What's Cloud Firestore?](https://firebase.google.com/docs/firestore/)
