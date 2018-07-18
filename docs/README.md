@@ -13,7 +13,7 @@ Go to your [firebase console](https://console.firebase.google.com) here and sele
 
 - Make sure you are in the **work** folder. Open the **app** folder. Here we have one file, the **main.css** which styles up our web app. We are going to create some more **javascript** files here.
 
-- Create an empty javascript file called **firestores.js** and copy the code snippet below to it. Replace the firebase data values with the ones in the firebase console tab you left open above.
+- Open the empty javascript file called **firestores.js** and copy the code snippet below to it. Replace the firebase data values with the ones in the firebase console tab you left open above.
 
 ```javascript
 
@@ -99,7 +99,7 @@ Explanation : The *next_title.innerText* code for instance, gets the **next meet
 The update the timestamp field with the value from the server code allows to record in the database when we last updated our entire collection;
 
 #### 6. Create "meetups" document in our database
-Cloud Firestore stores data in Documents, which are stored in Collections. Cloud Firestore creates collections and documents implicitly the first time you add data to the document. In the **app** folder, create an empty **data.js** file and copy the code snippet below to it.
+Cloud Firestore stores data in Documents, which are stored in Collections. Cloud Firestore creates collections and documents implicitly the first time you add data to the document. In the **app** folder, open **data.js** file and copy the code snippet below to it.
 
 ```javascript
 // Create meetups document
@@ -117,4 +117,19 @@ docRef.set({
 });
 
 ```
+#### 7. Display data into our web app
+In the **app** folder again, open **app.js** and add the code snippet below to it.
+
+```javascript
+/**
+ * Copyright 2018 PWAFire.Org. All Rights Reserved.
+ */
+// Display data into our web app
+const next_title=document.querySelector("#next_title");
+const next_desc=document.querySelector("#next_desc");
+const recent_title=document.querySelector("#recent_title");
+const recent_desc=document.querySelector("#recent_desc");
+
+```
+Explanation : The *next_title.innerText* code in stage 5 for gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e our paragraph element has its *id* as *next_title* and we use this id to display the data into our paragraph element.
 
