@@ -1,0 +1,108 @@
+                /* Author : Maye Edwin : https://maye.gdgmoi.com
+      hosted by : https://www.pwafire.org
+      License : https://github.com/mayeedwin/faq-beta/blob/master/LICENSE
+      */
+                
+      /* Style the element that is used to open and close the faqbeta_accordion class */
+      body
+      {
+        font-family: "Avenir Next W01", Lato, Roboto, Arial, sans-serif;
+      }       
+      
+      p.faqbeta_accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 700px;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        margin-bottom: 10px;
+        box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;
+        flex: 1;
+        border-radius: 7px;
+        font-size: 14px;
+        }
+                      
+        /* Add a background color to the faqbeta_accordion if it is clicked on
+        (add the .active class with JS), and when you move the mouse over it (hover) */
+                      
+        p.faqbeta_accordion.active,
+        p.faqbeta_accordion:hover {
+        background-color: #ddd;
+        }
+                      
+        /* Unicode character for "plus" sign (+) */
+                      
+        p.faqbeta_accordion:after {
+        content: '\2795';
+        font-size: 14px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+        }
+                      
+        /* Unicode character for "minus" sign (-) */
+                      
+        p.faqbeta_accordion.active:after {
+        content: "\2796";
+        }
+                      
+        /* Style the element that is used for the faqbeta_panel class */
+                      
+        div.faqbeta_panel {
+        padding: 0 18px;
+        background-color: #fbfbfb;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease-in-out;
+        opacity: 0;
+        margin-bottom: 10px;
+        text-align: left;
+        width: 700px;
+        }
+                      
+        div.faqbeta_panel.show {
+        opacity: 1;
+        max-height: 500px;
+        /* Whatever you like, as long as its more than the height
+        of the content (on all screen sizes) */
+        }
+        /*style the main faq-beta section*/
+        #gdg-faqs {
+        padding: 10px;
+        background-color: #fbfbfb;
+        }
+                      
+        /*  define for pixel-device ratio */
+              
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min--moz-device-pixel-ratio: 1.5),
+        only screen and (-o-device-pixel-ratio: 3/2),
+        only screen and (min-device-pixel-ratio: 1.5) {
+        #gdg-faqs {
+        padding: 10px;
+        }
+        p.faqbeta_accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        }
+        div.faqbeta_panel {
+        width: auto;
+        }
+        }
+
+        .footer p {
+          margin-top: 10px;
+          text-align: center;
+        }
