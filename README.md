@@ -13,4 +13,4 @@ latency or Internet connectivity.
 Get started on how to set up your web app for cloud firestore on this [setup lab](https://github.com/mayeedwin/firestore/tree/master/docs) by PWA Fire Codelabs.
 
 #### [Engage us](https://twitter.com/pwafire)
-Donate a star, like, follow and contribute in any way. Be sure to use **Project PWA Fire**. If you use [PWA Fire Developer Resources](https://pwafire.org/developer), kindly let us know. JUST simply [Tweet us](https://twitter.com/pwafire).
+Donate a star, like, follow and contribute in any way. If you use [PWA Fire Developer Resources](https://pwafire.org/developer), kindly let us know. JUST simply [Tweet us](https://twitter.com/pwafire).
