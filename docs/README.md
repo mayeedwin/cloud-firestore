@@ -66,7 +66,7 @@ firebase.firestore().enablePersistence()
 ```
 #### 4. Read firestore data from database in the meetups collection
 
-The code below allows us to read firestore data from database in the meetups collection created; Add it below the code above
+The code below allows us to read firestore data from our database in the meetups collection created; Add it below the code above
 
 ```javascript
 
@@ -91,8 +91,12 @@ db.collection("meetups").get().then((querySnapshot) => {
 
 ```
 
-*next_title.innerText* allows get the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e 
+Explanation : The *next_title.innerText* code for instance, gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e 
 
 ```html 
 <p class="faqbeta_accordion" id="next_title"></p>
 ```
+The update the timestamp field with the value from the server code allows to record in the database when we last updated our entire collection;
+
+
+
