@@ -13,7 +13,7 @@ Go to your [firebase console](https://console.firebase.google.com) here and sele
 
 - Make sure you are in the **work** folder. Open the **app** folder. Here we have **main.css** which styles up our web app and empty javascript files; **app.js**, **firestores.js** and **data.js**. We are going to add some code to them.
 
-- Open the empty javascript file called **firestores.js** and copy the code snippet below to it. Replace the firebase data values with the ones in the firebase console tab you left open above.
+- Open **firestores.js** and copy the code snippet below to it. Replace the firebase data values with the ones in the firebase console tab you left open above.
 
 ```javascript
 
