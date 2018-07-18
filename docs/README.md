@@ -8,7 +8,7 @@ Open the [Firebase Console](https://console.firebase.google.com/) and create a n
 #### 2. Select a starting mode for your Cloud Firestore Security Rules
 To get started with the Web, select **test mode** and click **Enable.** Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to **read** and **overwrite** your data. Make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestore.
 
-#### 3. AddIng Firebase to our Web app
+#### 3. Adding Firebase to our Web app
 Go to your [firebase console](https://console.firebase.google.com) here and select your project. Click **Settings** icon on the top left side just beside **Project Overview** and select **Project Settings.** Scroll down the view and click **Add Firebase to your web app** icon. Do not close the tab.
 
 - Make sure you are in the **work** folder. Open the **app** folder. Here we have one file, the **main.css** which styles up our web app. We are going to create some more **javascript** files here.
@@ -64,7 +64,7 @@ firebase.firestore().enablePersistence()
 
 
 ```
-#### 4. Read firestore data from database in the meetups collection
+#### 5. Read firestore data from database in the meetups collection
 
 The code below allows us to read firestore data from our database in the meetups collection created; Add it below the code above
 
@@ -98,5 +98,23 @@ Explanation : The *next_title.innerText* code for instance, gets the **next meet
 ```
 The update the timestamp field with the value from the server code allows to record in the database when we last updated our entire collection;
 
+#### 6. Create "meetups" document in our database
+Cloud Firestore stores data in Documents, which are stored in Collections. Cloud Firestore creates collections and documents implicitly the first time you add data to the document. In the **app** folder, create an empty **data.js** file and copy the code snippet below to it.
 
+```javascript
+// Create meetups document
+var docRef = db.collection("meetups").doc("categ");
+docRef.set({
+    next_title: "Next '18 Extended 2018",
+    next_desc: "Next ’18 is a three day global exhibition of inspiration, innovation, and education where we learn from one another how the cloud can transform how we work and power everyone’s successes.",
+    recent_title: "Google IO Extended Eldoret 2018",
+    recent_desc: "I/O Extended events help developers from around the world take part in the I/O experience from wherever they are. We had Talks, Hands-on sessions and I/O 18 Recap viewing",
+    timestamp: ""
+})
+
+.then(function() {
+    console.log("Document successfully updated!");
+});
+
+```
 
