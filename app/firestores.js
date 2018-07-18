@@ -1,11 +1,11 @@
 // Initialize Firebase
 let config = {
-    apiKey: "AIzaSyCby0lBsEtADjRL0odxx5uaqCZKVA0KGHk",
-    authDomain: "gdgmoipwa.firebaseapp.com",
-    databaseURL: "https://gdgmoipwa.firebaseio.com",
-    projectId: "gdgmoipwa",
-    storageBucket: "gdgmoipwa.appspot.com",
-    messagingSenderId: "202011378148"
+    apiKey: "AIzaSyC2XasJ9hLLzXHqDS1QlMrUAUzmzCKykAk",
+    authDomain: "firestoresbeta.firebaseapp.com",
+    databaseURL: "https://firestoresbeta.firebaseio.com",
+    projectId: "firestoresbeta",
+    storageBucket: "firestoresbeta.appspot.com",
+    messagingSenderId: "271348730133"
 };
 
 firebase.initializeApp(config);
