@@ -91,7 +91,7 @@ db.collection("meetups").get().then((querySnapshot) => {
 
 ```
 
-Explanation : The *next_title.innerText* code for instance, gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e 
+**Explanation :** The *next_title.innerText* code for instance, gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e 
 
 ```html 
 <p class="faqbeta_accordion" id="next_title"></p>
@@ -131,5 +131,9 @@ const recent_title=document.querySelector("#recent_title");
 const recent_desc=document.querySelector("#recent_desc");
 
 ```
-Explanation : The *next_title.innerText* code in stage 5 for gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e our paragraph element has its *id* as *next_title* and we use this id to display the data into our paragraph element.
+**Explanation :** The *next_title.innerText* code in stage 5 for gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e our paragraph element has its **id** as ***next_title*** and we use this **id** to display the data into our paragraph element.
+
+```html 
+<p class="faqbeta_accordion" id="next_title"></p>
+```
 
