@@ -11,6 +11,6 @@ To get started with the Web, select test mode. Test Mode is good for getting sta
 #### 3. AddIng Firebase to our Web app
 For our project, we are going to use our own configuartion file to add Firebase to our web app. 
 
-> Make sure you are in the work folder. 
+- Make sure you are in the work folder. Open the app folder. Here we have one file, the main.css which styles up our web app.
 
-> Create a new folder called app - all our web app firestore config files will be created here.
+- Create a new folder called app - all our web app firestore config files will be created here.
