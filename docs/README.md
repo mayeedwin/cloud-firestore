@@ -11,6 +11,8 @@ To get started with the Web, select **test mode** and click **Enable.** Test Mod
 ### [Getting started with the code](https://pwafire.org/developer/codelabs/firestore-for-web)
 The default **index.html** page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
 
+We also have **service-worker.js** in our project that allows us to add progressive web app offline features. [Learn more](https://pwafire.org/developer/codelabs/pwafire/#sw-config) about the service worker and its features.
+
 #### [1. Adding Firebase to our Web app](https://console.firebase.google.com)
 Go to your [firebase console](https://console.firebase.google.com) here and select your project. Click **Settings** icon on the top left side just beside **Project Overview** and select **Project Settings.** Scroll down the view and click **Add Firebase to your web app** icon. Do not close the tab.
 
@@ -64,7 +66,6 @@ firebase.firestore().enablePersistence()
             // ...
         }
     });
-
 
 ```
 #### [3. Read firestore data from database in the meetups collection]()
@@ -142,6 +143,7 @@ const recent_desc=document.querySelector("#recent_desc");
 ### [Firebase hosting](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting)
 We are done! Let's now deploy our cloud firestore web app to firebase ! Follow [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting) to deploy our web app.
 
-### What next?
-You got any **bug?** report it [here for support.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute?  Learn more on firebase web setup here
+### [What next?]()
+You got any **bug?** Report it [here for support.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute?
+
 
