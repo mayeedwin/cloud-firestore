@@ -113,7 +113,7 @@ docRef.set({
 })
 
 .then(function() {
-    console.log("Document successfully updated!");
+    console.log("Document successfully created!");
 });
 
 ```
