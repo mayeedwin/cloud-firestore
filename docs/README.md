@@ -45,27 +45,48 @@ This feature caches a copy of the Cloud Firestore data that your app is actively
 
 ```javascript
 
-// Initialize Firebase
-let config = {
-    apiKey: "apiKey",
-    authDomain: "projectId.firebaseapp.com",
-    databaseURL: "https://databaseName.firebaseio.com",
-    projectId: "projectId",
-    storageBucket: "bucket.appspot.com"
-    messagingSenderId: "messagingSenderId"
-};
+// Enable offline capabilities
+firebase.firestore().enablePersistence()
+    .then(function() {
+        // Initialize Cloud Firestore through firebase
+        var db = firebase.firestore();
+    })
+    .catch(function(err) {
+        if (err.code == 'failed-precondition') {
+            // Multiple tabs open, persistence can only be enabledin one tab at a a time.
 
-firebase.initializeApp(config);
-let firestore = firebase.firestore();
-console.log("Cloud Firestores Loaded")
+        } else if (err.code == 'unimplemented') {
+            // The current browser does not support all of the
+            // features required to enable persistence
+            // ...
+        }
+    });
 
-var db = firebase.firestore();
-
-const timestamps = firebase.firestore();
-const settings = {
-    timestampsInSnapshots: true
-};
-firestore.settings(settings);
 
 ```
+#### 4. Read firestore data from database in the meetups collection
 
+The code below allows us to read firestore data from database in the meetups collection created; next_title innerText allows get the next meetup title value and passes it to our data.js which then is displayed into our web app in the paragraph element; i.e <p class="faqbeta_accordion" id="next_title"></p>
+
+```javascript
+
+var docRef = db.collection('meetups').doc('categ');
+// Update the timestamp field with the value from the server
+var updateTimestamp = docRef.update({
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+});
+console.log(updateTimestamp)
+
+// Read firestore data from database in the meetups collection
+db.collection("meetups").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} =>`, doc.data());
+        const meetups = doc.data();
+        next_title.innerText = meetups.next_title;
+        next_desc.innerText = meetups.next_desc;
+        recent_title.innerText = meetups.recent_title;
+        recent_desc.innerText = meetups.recent_desc;
+    });
+});
+
+```
