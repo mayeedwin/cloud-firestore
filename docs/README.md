@@ -11,7 +11,7 @@ To get started with the Web, select **test mode** and click **Enable.** Test Mod
 #### 3. Adding Firebase to our Web app
 Go to your [firebase console](https://console.firebase.google.com) here and select your project. Click **Settings** icon on the top left side just beside **Project Overview** and select **Project Settings.** Scroll down the view and click **Add Firebase to your web app** icon. Do not close the tab.
 
-- Make sure you are in the **work** folder. Open the **app** folder. Here we have one file, the **main.css** which styles up our web app. We are going to create some more **javascript** files here.
+- Make sure you are in the **work** folder. Open the **app** folder. Here we have **main.css** which styles up our web app and empty javascript files; **app.js**, **firestores.js** and **data.js**. We are going to add some code to them.
 
 - Open the empty javascript file called **firestores.js** and copy the code snippet below to it. Replace the firebase data values with the ones in the firebase console tab you left open above.
 
