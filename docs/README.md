@@ -6,11 +6,13 @@ In this codelab, we're going to learn how to add [Firebase](https://firebase.goo
 Open the [Firebase Console](https://console.firebase.google.com/) and create a new project. In the Database section, click the Get Started button for Cloud Firestore.
 
 #### 2. Select a starting mode for your Cloud Firestore Security Rules
-To get started with the Web, select test mode. Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to read and overwrite your data. After testing, make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestores.
+To get started with the Web, select **test mode** and click **Enable.** Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to **read** and **overwrite** your data. Make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestore.
 
 #### 3. AddIng Firebase to our Web app
-For our project, we are going to use our own configuartion file to add Firebase to our web app. 
+For our project, we are going to use our **custom configuration** file to add Firebase to our web app. 
 
-- Make sure you are in the work folder. Open the app folder. Here we have one file, the main.css which styles up our web app.
+- Make sure you are in the **work** folder. Open the **app** folder. Here we have one file, the **main.css** which styles up our web app. We are going to create some more **javascript** files here.
 
-- Create a new folder called app - all our web app firestore config files will be created here.
+- Create an empty javascript file called **firestores.js**.
+
+- Now to add firebase to our web app; 
