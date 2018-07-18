@@ -146,6 +146,6 @@ const recent_desc=document.querySelector("#recent_desc");
 We are done! Let's now deploy our cloud firestore web app to firebase ! Follow [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting) to deploy our web app.
 
 ### [What next?]()
-You got any **bug?** Report it [here for support.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute?
+You got any **bug?** Report it [here for support.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/firestore/issues/new) 
 
 
