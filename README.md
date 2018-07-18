@@ -1,4 +1,4 @@
-### [firebase cloud firestore web codelab](https://pwafire.org/developer/codelabs/firestore-web)
+### [Firebase Cloud Firestore Web Codelab](https://pwafire.org/developer/codelabs/firestore-web)
 Get started with firebase cloud firestores for web apps coidelab curated by [PWA Fire Codelabs](https://pwafire.org/developer/codelabs/)
 
 #### What's Cloud Firestore?
@@ -10,3 +10,6 @@ support for mobile and web so you can build responsive apps that work regardless
 latency or Internet connectivity. 
 
 [Read More here](https://firebase.google.com/docs/firestore/) on the Cloud Firestore Firebase Documentation.
+
+#### PWA Fire Cloud Firestore for Web Codelab
+Get started on how to set up your web app for cloud firestoreb on this setup lab by PWA Fire Codelabs
