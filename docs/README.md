@@ -40,7 +40,7 @@ const settings = {
 firestore.settings(settings);
 
 ```
-#### Enable offline data
+#### 4. Enable offline data
 This feature caches a copy of the Cloud Firestore data that your app is actively using, so your app can access the data when the device is offline. The code snippet below does that for us. Copy and add it below the code above in firestore.js file.
 
 ```javascript
