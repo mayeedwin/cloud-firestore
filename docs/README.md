@@ -2,8 +2,8 @@
 In this codelab, we're going to learn how to add [Firebase](https://firebase.google.com/docs/) to your [web app](https://pwafire.org/developer/codelabs/pwafire/) and serve content from the [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore/) and make your web app work offline as well.
 
 
-### 1. Create a Cloud Firestore project
+#### 1. Create a Cloud Firestore project
 Open the [Firebase Console](https://console.firebase.google.com/) and create a new project. In the Database section, click the Get Started button for Cloud Firestore.
 
-### 2. Select a starting mode for your Cloud Firestore Security Rules
+#### 2. Select a starting mode for your Cloud Firestore Security Rules
 To get started with the Web, select test mode. Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to read and overwrite your data. After testing, make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestores.
