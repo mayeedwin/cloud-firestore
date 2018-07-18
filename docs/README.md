@@ -1,15 +1,19 @@
 ### [Firebase Cloud Firestore Web Codelab](https://pwafire.org/developer/codelabs/firestore-for-web)
 In this codelab, we're going to learn how to add [Firebase](https://firebase.google.com/docs/) to your [web app](https://pwafire.org/developer/codelabs/pwafire/) and serve content from the [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore/) and make your web app work offline as well.
 
+### [Tools needed](https://firebase.google.com/docs/hosting/deploying)
+We shall be using Firebase in this codelab. Make sure you install firebase tools as in [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#add-firebase) before we begin. Just install and leave it there.
 
 #### [1. Create a Cloud Firestore project](https://console.firebase.google.com/)
 Open the [Firebase Console](https://console.firebase.google.com/) and create a new project. In the Database section, click the Get Started button for Cloud Firestore.
 
-#### 2. Select a starting mode for your Cloud Firestore Security Rules
+#### [2. Select a starting mode for your Cloud Firestore Security Rules]()
 To get started with the Web, select **test mode** and click **Enable.** Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to **read** and **overwrite** your data. Make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestore.
 
-### Getting started with the code
+### [Getting started with the code](https://pwafire.org/developer/codelabs/firestore-for-web)
 The default **index.html** page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
+
+We also have **service-worker.js** in our project that allows us to add progressive web app offline features. [Learn more](https://pwafire.org/developer/codelabs/pwafire/#sw-config) about the service worker and its features.
 
 #### [1. Adding Firebase to our Web app](https://console.firebase.google.com)
 Go to your [firebase console](https://console.firebase.google.com) here and select your project. Click **Settings** icon on the top left side just beside **Project Overview** and select **Project Settings.** Scroll down the view and click **Add Firebase to your web app** icon. Do not close the tab.
@@ -65,7 +69,6 @@ firebase.firestore().enablePersistence()
         }
     });
 
-
 ```
 #### [3. Read firestore data from database in the meetups collection]()
 
@@ -120,7 +123,7 @@ docRef.set({
 });
 
 ```
-#### 5. Display data into our web app
+#### [5. Display data into our web app]()
 In the **app** folder again, open **app.js** and add the code snippet below to it.
 
 ```javascript
@@ -139,7 +142,10 @@ const recent_desc=document.querySelector("#recent_desc");
 ```html 
 <p class="faqbeta_accordion" id="next_title"></p>
 ```
-### Firebase hosting
+### [Firebase hosting](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting)
 We are done! Let's now deploy our cloud firestore web app to firebase ! Follow [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting) to deploy our web app.
 
-### What next?
+### [What next?]()
+You got any **bug?** Report it [here for support.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/firestore/issues/new) 
+
+
