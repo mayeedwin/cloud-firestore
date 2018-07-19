@@ -1,4 +1,4 @@
-### [Firebase Cloud Firestore Web Codelab](https://pwafire.org/developer/codelabs/firestore-for-web)
+### [Firebase Cloud Firestore Web Codelab](https://pwafire.org/developer/codelabs/cloud-firestore-for-web)
 In this codelab, we're going to learn how to add [Firebase](https://firebase.google.com/docs/) to your [web app](https://pwafire.org/developer/codelabs/pwafire/) and serve content from the [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore/) and make your web app work offline as well.
 
 ### [Tools needed](https://firebase.google.com/docs/hosting/deploying)
@@ -10,10 +10,10 @@ Open the [Firebase Console](https://console.firebase.google.com/) and create a n
 #### [2. Select a starting mode for your Cloud Firestore Security Rules]()
 To get started with the Web, select **test mode** and click **Enable.** Test Mode is good for getting started with the mobile and web client libraries, but allows anyone to **read** and **overwrite** your data. Make sure to see how to [secure](https://firebase.google.com/docs/firestore/quickstart?authuser=0#secure_your_data) in cloud firestore.
 
-### [Getting started with the code](https://pwafire.org/developer/codelabs/firestore-for-web)
-The default [index.html](https://github.com/mayeedwin/firestore/blob/master/work/index.html) page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
+### [Getting started with the code](https://pwafire.org/developer/codelabs/cloud-firestore-for-web)
+The default [index.html](https://github.com/mayeedwin/cloud-firestore/blob/master/work/index.html) page in our **work** folder is already set ready to configure our project for Firebase use. At the bottom of our page, we have added the Firebase and Cloud Firestore libraries we need to set up.
 
-We also have [service-worker.js](https://github.com/mayeedwin/firestore/blob/master/work/service-worker.js) in our project that allows us to add progressive web app offline features. [Learn more](https://pwafire.org/developer/codelabs/pwafire/#sw-config) about the service worker and its features.
+We also have [service-worker.js](https://github.com/mayeedwin/cloud-firestore/blob/master/work/service-worker.js) in our project that allows us to add progressive web app offline features. [Learn more](https://pwafire.org/developer/codelabs/pwafire/#sw-config) about the service worker and its features.
 
 #### [1. Adding Firebase to our Web app](https://console.firebase.google.com)
 Go to your [firebase console](https://console.firebase.google.com) here and select your project. Click **Settings** icon on the top left side just beside **Project Overview** and select **Project Settings.** Scroll down the view and click **Add Firebase to your web app** icon. Do not close the tab.
@@ -148,6 +148,6 @@ We are done! Let's now deploy our cloud firestore web app to firebase ! Follow [
 If you are using Chrome browser, open Dev Tools and while in the Application panel, select Service Worker and enable offline. Refresh your web app. Celebrate! Aren't you a nerd already?
 
 ### [What next?]()
-You got any **bug?** Report it [here for support.](https://github.com/mayeedwin/firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/firestore/issues/new) 
+You got any **bug?** Report it [here for support.](https://github.com/mayeedwin/cloud-firestore/issues/new) You want to contribute? Create your [feature here.](https://github.com/mayeedwin/cloud-firestore/issues/new) 
 
 
