@@ -15,6 +15,7 @@ console.log("Cloud Firestores Loaded");
 
 var db = firebase.firestore();
 
+
 // Enable offline capabilities
 firebase.firestore().enablePersistence()
     .then(function () {
@@ -33,11 +34,6 @@ firebase.firestore().enablePersistence()
     });
 
 var docRef = db.collection('meetups').doc('categ');
-// Update the timestamp field with the value from the server
-var updateTimestamp = docRef.update({
-    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-});
-console.log(updateTimestamp);
 
 // Read firestore data from database in the meetups collection
 db.collection("meetups").get().then((querySnapshot) => {
