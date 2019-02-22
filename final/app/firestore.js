@@ -1,16 +1,17 @@
+/**
+ * Copyright 2018 pwafire.org 
+ * All Rights Reserved.
+ */
+
 // Initialize Firebase
 let config = {
-    apiKey: "AIzaSyC2XasJ9hLLzXHqDS1QlMrUAUzmzCKykAk",
-    authDomain: "firestoresbeta.firebaseapp.com",
     databaseURL: "https://firestoresbeta.firebaseio.com",
     projectId: "firestoresbeta",
-    storageBucket: "firestoresbeta.appspot.com",
-    messagingSenderId: "271348730133"
 };
 
 firebase.initializeApp(config);
 let firestore = firebase.firestore();
-console.log("Cloud Firestores Loaded")
+console.log("Cloud Firestores Loaded");
 
 var db = firebase.firestore();
 
@@ -22,11 +23,11 @@ firestore.settings(settings);
 
 // Enable offline capabilities
 firebase.firestore().enablePersistence()
-    .then(function() {
+    .then(function () {
         // Initialize Cloud Firestore through firebase
         var db = firebase.firestore();
     })
-    .catch(function(err) {
+    .catch(function (err) {
         if (err.code == 'failed-precondition') {
             // Multiple tabs open, persistence can only be enabled in one tab at a a time.
 
@@ -42,7 +43,7 @@ var docRef = db.collection('meetups').doc('categ');
 var updateTimestamp = docRef.update({
     timestamp: firebase.firestore.FieldValue.serverTimestamp()
 });
-console.log(updateTimestamp)
+console.log(updateTimestamp);
 
 // Read firestore data from database in the meetups collection
 db.collection("meetups").get().then((querySnapshot) => {
@@ -51,7 +52,9 @@ db.collection("meetups").get().then((querySnapshot) => {
         const meetups = doc.data();
         next_title.innerText = meetups.next_title;
         next_desc.innerText = meetups.next_desc;
+        next_rsvp_url.href = meetups.next_rsvp_url;
         recent_title.innerText = meetups.recent_title;
         recent_desc.innerText = meetups.recent_desc;
+        recent_rsvp_url.href = meetups.recent_rsvp_url;
     });
 });

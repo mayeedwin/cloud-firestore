@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 this.classList.toggle("active");
                 this.nextElementSibling.classList.toggle("show");
             }
-        }
+        };
     }
 
     function setClass(els, className, fnName) {
