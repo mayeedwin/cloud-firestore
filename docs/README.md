@@ -126,8 +126,8 @@ const recent_desc=document.querySelector("#recent_desc");
 
 ```html 
 <p class="faqbeta_accordion" id="next_title">
-            <!-- load next title from cloud 
-                    firestore --> loading...
+    <!-- load next title from cloud 
+        firestore --> loading...
     </p>
 ```
 ### [Firebase hosting](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting)
