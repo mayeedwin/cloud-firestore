@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="theme-color" content="#fff" />
-	<link rel="shortcut icon" sizes="32x32" href="https://pwafire.org/images/icons/pwafire32white.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PWA Fire Codelabs - Get started with firebase cloud firestore for web apps </title>
-    <link rel="stylesheet" href="app/main.css">
-<!-- register service worker -->
-<script>
 
-    if ('serviceWorker' in navigator) 
-    {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/service-worker.js')
-      .then(function() { console.log("Service Worker Registered, Cheers to PWA Fire!"); });
-    }
-    );
-  }  
-  </script> 
-<!-- end of service worker -->
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#fff" />
+        <link rel="shortcut icon" sizes="32x32" href="https://pwafire.org/images/icons/pwafire32white.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>PWA Fire Codelabs - Get started with firebase cloud firestore for web apps </title>
+        <link rel="stylesheet" href="app/main.css">
+        <!-- register service worker -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('/service-worker.js')
+                        .then(function () {
+                            console.log("Service Worker Registered, Cheers to PWA Fire!");
+                        });
+                });
+            }
+        </script>
+        <!-- end of service worker -->
+    </head>
 
-  <section id="gdg-faqs">
-   <div align="center">
-       <h3>Never Miss Our Events</h3>
-        <p class="faqbeta_accordion" id="next_title"></p>
-        <div class="faqbeta_panel"  id="next_desc"></div>
-        <p class="faqbeta_accordion" id="recent_title"></p>
-        <div class="faqbeta_panel"  id="recent_desc"></div>
-    </div>
-        <br>
-    </section>
+    <body>
 
-    <footer class="footer">
-        <p>Codelab by <a href="https://pwafire.org/developer/codelabs/">PWA Fire Codelabs</a></p>
-    </footer>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
-    <script src="app/firestore.js"></script>
-    <script src="app/data.js"></script>
-    <script src="app/app.js"></script>
-    <script src="app/faqbeta.js"></script>
-</body>
+        <section id="gdg-faqs">
+            <div align="center">
+                <h3>Never Miss Our Events</h3>
+
+                <!-- next event 
+          -->
+                <div class="meetup">
+                    <p class="faqbeta_accordion" id="next_title">
+                        <!-- load next title from cloud 
+                    firestore --> loading...
+                    </p>
+                    <div class="faqbeta_panel">
+                        <p id="next_desc">
+                            <!-- load next meetup desc from cloud 
+                    firestore --> loading...
+                        </p>
+                        <a id="next_rsvp_url" href="" target="_blank">
+                            <!-- add next ticket url
+                       to href  -->
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- recent event 
+          -->
+                <div class="meetup">
+                    <p class="faqbeta_accordion" id="recent_title">
+                        <!-- load recent title from cloud 
+                    firestore --> loading...
+                    </p>
+                    <div class="faqbeta_panel">
+                        <p id="recent_desc">
+                            <!-- load recent meetup desc from cloud 
+                    firestore --> loading...
+                        </p>
+                        <a id="recent_rsvp_url" href="" target="_blank">
+                            <!-- add recent ticket url
+                       to href  -->
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+        </section>
+
+        <footer class="footer">
+            <p>Codelab by <a href="https://pwafire.org/developer/codelabs/">PWA Fire Codelabs</a></p>
+        </footer>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+        <script src="app/firestore.js"></script>
+        <script src="app/data.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/faqbeta.js"></script>
+    </body>
+
 </html>
