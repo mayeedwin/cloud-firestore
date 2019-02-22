@@ -15,7 +15,6 @@ console.log("Cloud Firestores Loaded");
 
 var db = firebase.firestore();
 
-
 // Enable offline capabilities
 firebase.firestore().enablePersistence()
     .then(function () {

@@ -26,25 +26,13 @@ Go to your [firebase console](https://console.firebase.google.com) here and sele
 
 // Initialize Firebase
 let config = {
-    apiKey: "apiKey",
-    authDomain: "projectId.firebaseapp.com",
-    databaseURL: "https://databaseName.firebaseio.com",
+    databaseURL: "https://project.firebaseio.com",
     projectId: "projectId",
-    storageBucket: "bucket.appspot.com"
-    messagingSenderId: "messagingSenderId"
 };
 
 firebase.initializeApp(config);
 let firestore = firebase.firestore();
-console.log("Cloud Firestores Loaded")
-
-var db = firebase.firestore();
-
-const timestamps = firebase.firestore();
-const settings = {
-    timestampsInSnapshots: true
-};
-firestore.settings(settings);
+console.log("Cloud Firestores Loaded");
 
 ```
 #### [2. Enable offline data]()
@@ -76,13 +64,6 @@ The code below allows us to read firestore data from our database in the meetups
 
 ```javascript
 
-var docRef = db.collection('meetups').doc('categ');
-// Update the timestamp field with the value from the server
-var updateTimestamp = docRef.update({
-    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-});
-console.log(updateTimestamp)
-
 // Read firestore data from database in the meetups collection
 db.collection("meetups").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
@@ -90,8 +71,10 @@ db.collection("meetups").get().then((querySnapshot) => {
         const meetups = doc.data();
         next_title.innerText = meetups.next_title;
         next_desc.innerText = meetups.next_desc;
+        next_rsvp_url.href = meetups.next_rsvp_url;
         recent_title.innerText = meetups.recent_title;
         recent_desc.innerText = meetups.recent_desc;
+        recent_rsvp_url.href = meetups.recent_rsvp_url;
     });
 });
 
@@ -100,7 +83,10 @@ db.collection("meetups").get().then((querySnapshot) => {
 **Explanation :** The *next_title.innerText* code for instance, gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e 
 
 ```html 
-<p class="faqbeta_accordion" id="next_title"></p>
+ <p class="faqbeta_accordion" id="next_title">
+            <!-- load next title from cloud 
+                    firestore --> loading...
+    </p>
 ```
 The update the timestamp field with the value from the server code allows to record in the database when we last updated our entire collection;
 
@@ -111,25 +97,24 @@ Cloud Firestore stores data in Documents, which are stored in Collections. Cloud
 // Create meetups document
 var docRef = db.collection("meetups").doc("categ");
 docRef.set({
-    next_title: "Next '18 Extended 2018",
-    next_desc: "Next ’18 is a three day global exhibition of inspiration, innovation, and education where we learn from one another how the cloud can transform how we work and power everyone’s successes.",
-    recent_title: "Google IO Extended Eldoret 2018",
-    recent_desc: "I/O Extended events help developers from around the world take part in the I/O experience from wherever they are. We had Talks, Hands-on sessions and I/O 18 Recap viewing",
-    timestamp: ""
-})
+        next_title: "pwa dev summit 2019",
+        next_desc: "Meet awesome web developers and designers for a two-day developer summit engaging on what's next for the web and the magical journey with progressive web apps",
+        next_rsvp_url: "https://pwafire.org/developer/codelabs/cloud-firestore-for-web/",
+        recent_title: "pwa dev summit 2019",
+        recent_desc: "Meet awesome web developers and designers for a two-day developer summit engaging on what's next for the web and the magical journey with progressive web apps",
+        recent_rsvp_url: "https://pwafire.org/developer/codelabs/cloud-firestore-for-web/",
+    })
 
-.then(function() {
-    console.log("Document successfully created!");
-});
+    .then(function () {
+        console.log("Document successfully created!");
+    });
 
 ```
 #### [5. Display data into our web app]()
 In the **app** folder again, open **app.js** and add the code snippet below to it.
 
 ```javascript
-/**
- * Copyright 2018 PWAFire.Org. All Rights Reserved.
- */
+
 // Display data into our web app
 const next_title=document.querySelector("#next_title");
 const next_desc=document.querySelector("#next_desc");
@@ -140,7 +125,10 @@ const recent_desc=document.querySelector("#recent_desc");
 **Explanation :** The *next_title.innerText* code in **stage 3** for gets the **next meetup** title value and passes it to our **data.js** which then is displayed into our web app in the paragraph element; i.e our paragraph element has its **id** as **next_title** and we use this **id** to display the data into our paragraph element.
 
 ```html 
-<p class="faqbeta_accordion" id="next_title"></p>
+<p class="faqbeta_accordion" id="next_title">
+            <!-- load next title from cloud 
+                    firestore --> loading...
+    </p>
 ```
 ### [Firebase hosting](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting)
 We are done! Let's now deploy our cloud firestore web app to firebase ! Follow [this guide here](https://pwafire.org/developer/codelabs/firebase-hosting-web/#firebase-hosting) to deploy our web app. Go offline and refresh your web app. The web app data is still available while offline. 
