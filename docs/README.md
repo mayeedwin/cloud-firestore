@@ -26,7 +26,7 @@ Go to your [firebase console](https://console.firebase.google.com) here and sele
 
 // Initialize Firebase
 let config = {
-    databaseURL: "https://project.firebaseio.com",
+    databaseURL: "https://databaseName.firebaseio.com",
     projectId: "projectId",
 };
 
@@ -84,8 +84,8 @@ db.collection("meetups").get().then((querySnapshot) => {
 
 ```html 
  <p class="faqbeta_accordion" id="next_title">
-            <!-- load next title from cloud 
-                    firestore --> loading...
+    <!-- load next title from cloud 
+    firestore --> loading...
     </p>
 ```
 The update the timestamp field with the value from the server code allows to record in the database when we last updated our entire collection;
@@ -98,10 +98,10 @@ Cloud Firestore stores data in Documents, which are stored in Collections. Cloud
 var docRef = db.collection("meetups").doc("categ");
 docRef.set({
         next_title: "pwa dev summit 2019",
-        next_desc: "Meet awesome web developers and designers for a two-day developer summit engaging on what's next for the web and the magical journey with progressive web apps",
+        next_desc: "Meet awesome web developers and designers for a two-day developer summit.",
         next_rsvp_url: "https://pwafire.org/developer/codelabs/cloud-firestore-for-web/",
         recent_title: "pwa dev summit 2019",
-        recent_desc: "Meet awesome web developers and designers for a two-day developer summit engaging on what's next for the web and the magical journey with progressive web apps",
+        recent_desc: "Meet awesome web developers and designers for a two-day developer summit.",
         recent_rsvp_url: "https://pwafire.org/developer/codelabs/cloud-firestore-for-web/",
     })
 
