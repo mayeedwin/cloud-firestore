@@ -15,12 +15,6 @@ console.log("Cloud Firestores Loaded");
 
 var db = firebase.firestore();
 
-const timestamps = firebase.firestore();
-const settings = {
-    timestampsInSnapshots: true
-};
-firestore.settings(settings);
-
 // Enable offline capabilities
 firebase.firestore().enablePersistence()
     .then(function () {
