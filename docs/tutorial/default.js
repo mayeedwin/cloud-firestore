@@ -1,11 +1,11 @@
 // Initialize Firebase
 let config = {
-    apiKey: "AIzaSyCby0lBsEtADjRL0odxx5uaqCZKVA0KGHk",
-      authDomain: "gdgmoipwa.firebaseapp.com",
-      databaseURL: "https://gdgmoipwa.firebaseio.com",
-      projectId: "gdgmoipwa",
-      storageBucket: "gdgmoipwa.appspot.com",
-      messagingSenderId: "202011378148"
+    apiKey: "apiKey",
+      authDomain: "authDomain",
+      databaseURL: "databaseURL",
+      projectId: "projectId",
+      storageBucket: "storageBucket",
+      messagingSenderId: "messagingSenderId"
   };
   
   firebase.initializeApp(config);
