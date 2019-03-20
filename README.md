@@ -1,5 +1,5 @@
 ### [Firebase Cloud Firestore Web Codelab](https://pwafire.org/developer/codelabs/cloud-firestore-for-web)
-Get started with firebase cloud firestores for web apps coidelab curated by [PWA Fire Codelabs](https://pwafire.org/developer/codelabs/)
+Get started with firebase cloud firestore for web apps coidelab curated by [PWA Fire Codelabs](https://pwafire.org/developer/codelabs/)
 
 #### [What's Cloud Firestore?](https://firebase.google.com/docs/cloud-firestore/)
 Cloud Firestore is a flexible, scalable database for mobile, web, and server development
