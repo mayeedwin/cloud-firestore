@@ -1,0 +1,119 @@
+      /* Author : Maye Edwin : https://maye.gdgmoi.com
+      hosted by : https://www.pwafire.org
+      */
+      body
+      {
+        font-family: "Avenir Next W01", Lato, Roboto, Arial, sans-serif;
+      }       
+      
+      p.faq-accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        max-width: 700px;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        margin-bottom: 10px;
+        box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;
+        flex: 1;
+        border-radius: 7px;
+        font-size: 14px;
+        }
+                      
+        /* Add a background color to the faq-accordion if it is clicked on
+        (add the .active class with JS), and when you move the mouse over it (hover) */
+                      
+        p.faq-accordion.active,
+        p.faq-accordion:hover {
+        background-color: #ddd;
+        }
+                      
+        /* Unicode character for "plus" sign (+) */
+                      
+        p.faq-accordion:after {
+        content: '\2795';
+        font-size: 14px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+        }
+                      
+        /* Unicode character for "minus" sign (-) */
+                      
+        p.faq-accordion.active:after {
+        content: "\2796";
+        }
+                      
+        /* Style the element that is used for the faq-panel class */
+                      
+        div.faq-panel {
+        padding: 0 18px;
+        background-color: #fbfbfb;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease-in-out;
+        opacity: 0;
+        margin-bottom: 10px;
+        text-align: left;
+        max-width: 700px;
+        }
+                      
+        div.faq-panel.show {
+          opacity: 1;
+          max-height: 500px;
+          height: 95px;
+        /* Whatever you like, as long as its more than the height
+        of the content (on all screen sizes) */
+        }
+        /*style the main faq-beta section*/
+        #event-faq {
+        padding: 10px;
+        background-color: #fbfbfb;
+        }
+                      
+        /*  define for pixel-device ratio */
+              
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min--moz-device-pixel-ratio: 1.5),
+        only screen and (-o-device-pixel-ratio: 3/2),
+        only screen and (min-device-pixel-ratio: 1.5) {
+        #event-faq {
+        padding: 10px;
+        }
+
+  .faq-accordion p {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+        transition: 0.4s;
+        }
+        .faq-panel {
+        width: auto;
+        }
+        }
+
+        .footer p {
+          margin-top: 10px;
+          text-align: center;
+        }
+
+  .delete {
+    margin-right: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    text-decoration: none;
+    }

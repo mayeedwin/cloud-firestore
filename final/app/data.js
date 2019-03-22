@@ -1,9 +1,9 @@
-/**
- * Copyright 2019 pwafire.org 
- * All Rights Reserved.
- */
+
+/* Copyright 2019 pwafire.org 
+   All Rights Reserved. */
 
 // Create meetups document
+
 var docRef = db.collection("meetups").doc("categ");
 docRef.set({
         next_title: "pwa dev summit 2019",
@@ -17,3 +17,5 @@ docRef.set({
     .then(function () {
         console.log("Document successfully created!");
     });
+
+ 

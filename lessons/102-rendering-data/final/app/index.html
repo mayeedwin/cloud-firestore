@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- register service worker -->
+   <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(function () {
+              console.log("[ PWA Fire Bundle ] Service Worker Registered");
+            });
+        });
+      }
+    </script>
+  <!-- end of service worker -->
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#fff" />
+  <link rel="shortcut icon" sizes="32x32" href="https://pwafire.org/images/icons/pwafire32white.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rendering Data From Firebase Cloud Firestore In Your Web App - PWA Fire Codelabs</title>
+  <link rel="stylesheet" href="assets/css/main.app.css">
+</head>
+
+<body>
+
+  <section id="event-faq">
+    <div align="center">
+      <h3>Never Miss Our Events</h3>
+
+      <!-- render events -->
+      <section class="events">
+
+      </section>
+
+    </div>
+    <br>
+  </section>
+
+  <footer class="footer">
+    <p>Render Data from Firebase Cloud Firestore, <a href="https://twitter.com/mayeedwin1/status/1107997720143368200" target="_blank" rel="noopener">Sort and Filter Cloud Firestore Collections</a></p>
+    <p>Cloud Firestore Web Codelab by <a href="https://pwafire.org/developer/codelabs/cloud-firestore-for-web/" target="_blank" rel="noopener">PWA Fire
+        Codelabs</a>
+    </p>
+    <p><b>[ 102 ]</b></p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+  <script src="assets/js/app.firestore.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/app.faq.js"></script>
+  <script type="module">
+      import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-window.prod.mjs';
+      
+      if ('serviceWorker' in navigator) {
+        const wb = new Workbox('/service-worker.js');
+      
+        wb.register();
+      }
+      </script>
+      
+</body>
+
+</html>
