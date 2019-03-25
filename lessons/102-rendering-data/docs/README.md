@@ -10,7 +10,7 @@
     - Some familiarity with service workers is recommended
     - Familiarity with Node.js is recommended
     - Familiarity with Firebase Hosting
-    - Familiarity with Cloud Firestore, take the initial codelab if not.
+    - Familiarity with Cloud Firestore, [take the initial codelab if not]()
  
  
  **NOTE** All the code is commented; Read through to understand each line. It is good to do so!
