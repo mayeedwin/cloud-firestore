@@ -1,0 +1,64 @@
+html {
+  --text-color: black;
+}
+
+body {
+  font-family: "Avenir Next W01", Lato, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+main {
+  margin: 0 auto;
+  padding: 2em;
+}
+
+a {
+  text-decoration: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+a:visited {
+  color: var(--text-color);
+}
+
+a:link {
+  color: var(--text-color);
+}
+
+a:active {
+  color: var(--text-color);
+}
+
+.event {
+  max-width: 400px;
+  transition: all 0.3s ease 0s;
+}
+
+.title {
+  background: aquamarine;
+  padding: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+button {
+  border-radius: 5px;
+  border: 2px solid var(--text-color);
+  display: inline-block;
+  padding: 5px;
+  user-select: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover {
+  outline: none;
+}
