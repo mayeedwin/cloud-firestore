@@ -1,0 +1,13 @@
+{
+  "firestore": {
+    "rules": "./final/firestore.rules"
+  },
+  "hosting": {
+    "public": "./final",
+    "ignore": [
+      "./final/firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
