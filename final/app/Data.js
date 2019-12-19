@@ -8,13 +8,13 @@ let summits = [
   {
     title: "Mobile Summit Africa",
     description:
-      "Meet passionate Students, Professionals, Designers, Developers and Educators shaping the Web in Africa!",
+      "Meet passionate Students, Professionals, Designers, Developers and Educators shaping the Mobile Industry in Africa!",
     rsvp: "https://pwafire.org/events"
   },
   {
     title: "AI Summit Africa",
     description:
-      "Meet passionate Students, Professionals, Designers, Developers and Educators shaping the Web in Africa!",
+      "Meet passionate Students, Professionals, Designers, Developers and Educators shaping AI in Africa!",
     rsvp: "https://pwafire.org/events"
   },
   {
