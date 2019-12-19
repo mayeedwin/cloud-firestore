@@ -1,5 +1,7 @@
 html {
   --text-color: black;
+  --title-background: aquamarine;
+  --box-shadow: #5dbA9b;
 }
 
 body {
@@ -8,7 +10,8 @@ body {
   color: var(--text-color);
 }
 
-main {
+main,
+footer {
   margin: 0 auto;
   padding: 2em;
 }
@@ -38,14 +41,17 @@ a:active {
 .event {
   max-width: 400px;
   transition: all 0.3s ease 0s;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .title {
-  background: aquamarine;
+  background: var(--title-background);
   padding: 5px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  box-shadow: 5px 5px 0 var(--box-shadow);
 }
 
 button {
@@ -61,4 +67,8 @@ button {
 
 button:hover {
   outline: none;
+}
+
+footer {
+  text-align: left;
 }
