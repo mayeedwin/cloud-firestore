@@ -1,6 +1,7 @@
 export const Event = doc => {
   // return component
   const event = document.createElement("section");
+  event.scrollIntoView();
 
   event.innerHTML = `
     <div class="event">
