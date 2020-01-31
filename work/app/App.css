@@ -14,6 +14,7 @@ main,
 footer {
   margin: 0 auto;
   padding: 2em;
+  max-width: 500px;
 }
 
 a {
@@ -38,16 +39,23 @@ a:active {
   color: var(--text-color);
 }
 
+.app {
+  margin: 20px auto;
+}
+
 .event {
-  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 500px;
+  padding: 15px;
+  margin: 5px auto;
   transition: all 0.3s ease 0s;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 .title {
   background: var(--title-background);
   padding: 5px;
+  max-width: 500px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -71,4 +79,5 @@ button:hover {
 
 footer {
   text-align: left;
+  max-width: 500px;
 }
