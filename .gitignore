@@ -15,7 +15,7 @@ yarn-error.log*
 # it commented so all members can deploy to the same project(s) in .firebaserc.
 # .firebaserc
 
-Firestore.js
+final/app/Firestore.js
 
 # Runtime data
 pids
